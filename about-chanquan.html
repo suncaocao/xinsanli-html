@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鑫三利集装箱服务</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global_css.css">
+    <link rel="stylesheet" href="css/dome.css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script type="text/javascript" src="http://api.map.baidu.com/api??v=2.0&ak=0jYAAHAqxfWQWQHbzHpF4vKCfgRqBYEu"></script>
+</head>
+<body>
+<header class="headerLoader"></header>
+<div class="g_body n-body">
+    <div class="n-banner" style="background-image: url('images/n-banner2.jpg')">
+        <div class="n-nav">
+            <div class="g_w">
+                <ul>
+                    <li class="" ><a href="about.html"  >企业简介 </a></li>
+                    <li class="active"  ><a href=""  >知识产权</a></li>
+                    <li class=""><a href="about-wenhua.html"  >企业文化</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="n-banner-text">
+            <div class="g_w">
+                <div class="n-banner-textContent">
+                    <h3><b>低成本  高效率  集装箱综合服务提供商</b></h3>
+                    <p>
+                        鑫三利集装箱服务有限公司前身为青岛鑫三利冷箱技术有限公司，成立于1996年，2002年10月正式注册，
+                        2019年更名为鑫三利集装箱服务有限公司，注册资金5000万元。主要业务包括： 集装箱及船舶设备的修理、检测业务、集装箱清洗，集装箱租赁，
+                        改造，集装箱机组、箱体材料及耗材的销售，集装箱及货物的堆存、装卸，集装箱拼装拆箱，仓储服务（不含违禁品、危险品）、包装服务；国内货运代理、国际货运代理、报关、报验；
+                        自营和代理各类商品和技术的进出口；船舶港口服务：使用车辆从事国际、国内航行船舶物料供应；集装箱运输。
+                    </p>
+                    <p>
+                        鑫三利是政府认定的高新技术企业，已实现对修箱业务全流程的高效管理体系，总部位于青岛，
+                        服务网络遍布国内沿海、沿江主要口岸城市、地区，现国内有11家下属公司，同时已在新加坡、柬埔寨、越南等东南亚国家进行布局，
+                        是远东地区行业领先的集装箱全生命周期综合服务提供商。
+                        鑫三利无论从产品服务、技术水平、市场份额、经营规模还是品牌影响力，都位居全国领先地位。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="n-about-cq">
+        <div class="g_w">
+            <div class="n-panel">
+                <div class="panel-group" id="accordion">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<footer class="footerLoader"></footer>
+
+<script id="chanquanItem" type="text/html">
+    {{#  layui.each(d, function(index, item){ }}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                {{# if (index==0) { }}
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1-{{index}}">
+                {{# } else { }}
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1-{{index}}">
+                {{# } }}
+                    <div class="">
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <h5>{{item.title}}</h5>
+                </a>
+            </h4>
+        </div>
+        {{# if (index==0) { }}
+        <div id="collapse1-{{index}}" class="panel-collapse collapse in">
+        {{# } else { }}
+        <div id="collapse1-{{index}}" class="panel-collapse collapse">
+        {{# } }}
+            <div class="panel-body">
+                <div class="info-body-b">
+                    {{item.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#  }); }}
+    {{#  if(d.length === 0){ }}
+    无数据
+    {{#  } }}
+</script>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper-4.2.6.min.js"></script>
+<script src="js/swiper.animate1.0.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/video.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/layui.all.js"></script>
+
+
+<script>
+    $(function () {
+        $('#myTab a').hover(function (e) {
+            $(this).tab('show')
+        });
+
+
+    })
+
+    initData();
+	
+    function initData(){
+        $.ajax({
+            type : 'get',
+            url : baseUrl+'/getChanquan?locate=cn',
+            success : function(data) {
+                if(data.flag){
+                    var chanquanData = data.t01ChanquanList;
+
+                    layui.use(['laytpl'], function() {
+                        var laytpl = layui.laytpl;
+
+                        var getTpl = chanquanItem.innerHTML
+                            , view = document.getElementById('accordion');
+                        laytpl(getTpl).render(chanquanData, function (html) {
+                            view.innerHTML = html;
+                        });
+                    });
+
+                }else{
+                    console.info(data.msg);
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

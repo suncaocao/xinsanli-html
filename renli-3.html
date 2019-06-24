@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鑫三利集装箱服务</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global_css.css">
+    <link rel="stylesheet" href="css/dome.css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script type="text/javascript" src="http://api.map.baidu.com/api??v=2.0&ak=0jYAAHAqxfWQWQHbzHpF4vKCfgRqBYEu"></script>
+</head>
+<body>
+<header class="headerLoader"></header>
+<div class="g_body n-body">
+    <div class="n-banner" style="background-image: url('images/n-banner4.jpg')">
+        <div class="n-nav">
+            <div class="g_w">
+                <ul>
+
+                    <li class="" ><a href="renli-1.html">员工发展 </a></li>
+                    <li class=""><a href="renli-2.html">员工培训</a></li>
+                    <li class="active"><a href="">人才招聘</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="n-banner-text ">
+            <div class="g_w">
+                <div class="n-banner-textContent rl1-bannerText">
+                    <h3><b>低成本  高效率  集装箱综合服务提供商</b></h3>
+                    <p>
+                        鑫三利集装箱服务有限公司前身为青岛鑫三利冷箱技术有限公司，成立于1996年，2002年10月正式注册，2019年更名为鑫三利集装箱服务有限公司，
+                        注册资金5000万元。主要业务包括：集装箱及船舶设备的修理、检测业务、集装箱清洗，集装箱租赁，改造，集装箱机组、箱体材料及耗材的销售，集装箱及货物的堆存、装卸，集装箱拼装拆箱，仓储服务（不含违禁品、危险品）、包装服务；国内货运代理、国际货运代理、报关、报验；
+                        自营和代理各类商品和技术的进出口；船舶港口服务：使用车辆从事国际、国内航行船舶物料供应；集装箱运输。
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="n-rl3 ">
+        <div class="g_w">
+            <div class="n-rl3-item1">
+                <div class="n-title">
+                    <h2>外部招聘</h2>
+                </div>
+                <div class="n-panel">
+                    <div class="panel-group" id="accordion1">
+                    </div>
+                </div>
+                <div class="fenye" id="zhaopinOutPager">
+                </div>
+            </div>
+            <div class="n-rl3-item2">
+                <div class="n-title">
+                    <h2>内部招聘</h2>
+                </div>
+                <div class="n-panel">
+                    <div class="panel-group" id="accordion2">
+                    </div>
+                </div>
+                <div class="fenye" id="zhaopinInPager">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer class="footerLoader"></footer>
+
+<script id="zhaopinItem" type="text/html">
+    {{#  layui.each(d, function(index, item){ }}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                {{# if (index==0) { }}
+                <a data-toggle="collapse" data-parent="#accordion{{item.type}}" href="#collapse{{item.type}}-{{index}}">
+                {{# } else { }}
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion{{item.type}}" href="#collapse{{item.type}}-{{index}}">
+                {{# } }}
+                    <div class="">
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <h5>{{item.title}}（
+                        {{# if (item.status==1) { }}
+                        有效
+                        {{# } else { }}
+                        已结束
+                        {{# } }}
+                        ）</h5>
+                </a>
+            </h4>
+        </div>
+        {{# if (index==0) { }}
+        <div id="collapse{{item.type}}-{{index}}" class="panel-collapse collapse in">
+        {{# } else { }}
+        <div id="collapse{{item.type}}-{{index}}" class="panel-collapse collapse">
+        {{# } }}
+            <div class="panel-body">
+                <div class="info-body-t">
+                    <div>
+                        <p>工作地点： {{item.area}}</p>
+                        <p>工作年限：{{item.workAge}}</p>
+
+                    </div>
+                    <div>
+                        <p>单位：{{item.department}}</p>
+                        <p>学历：{{item.education}}</p>
+                    </div>
+                    <div>
+                        <p>发布时间：{{layui.laytpl.toDateString(item.createDate,"yyyy-MM-dd")}} <p>
+                        <p>招聘人数：{{item.recruitment}}<p>
+                    </div>
+                    <div>
+                        <p>薪资待遇：{{item.salary}}<p>
+                        <p>职位有效期：{{item.period}} <p>
+                    </div>
+                </div>
+                <div class="info-body-b">
+                    {{item.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#  }); }}
+    {{#  if(d.length === 0){ }}
+    无数据
+    {{#  } }}
+</script>
+<script id="zhaopinPager" type="text/html">
+    {{# for(var i=0; i<d.pages; i++) { }}
+        {{# if (i==d.page) { }}
+            <a class="active" href="javascript:showPage({{i}},{{d.type}});">{{i+1}}</a>
+        {{# } else { }}
+            <a href="javascript:showPage({{i}},{{d.type}});">{{i+1}}</a>
+        {{# } }}
+    {{# } }}
+</script>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper-4.2.6.min.js"></script>
+<script src="js/swiper.animate1.0.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/video.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/layui.all.js"></script>
+
+<script>
+    $(function () {
+        $('#myTab a').hover(function (e) {
+            $(this).tab('show')
+        });
+    })
+    var pageNum = 4; //默认一页显示件数
+
+    layui.laytpl.toDateString = function(d, format){
+        var date = new Date(d || new Date())
+            ,ymd = [
+            this.digit(date.getFullYear(), 4)
+            ,this.digit(date.getMonth() + 1)
+            ,this.digit(date.getDate())
+        ]
+            ,hms = [
+            this.digit(date.getHours())
+            ,this.digit(date.getMinutes())
+            ,this.digit(date.getSeconds())
+        ];
+
+        format = format || 'yyyy-MM-dd HH:mm:ss';
+
+        return format.replace(/yyyy/g, ymd[0])
+            .replace(/MM/g, ymd[1])
+            .replace(/dd/g, ymd[2])
+            .replace(/HH/g, hms[0])
+            .replace(/mm/g, hms[1])
+            .replace(/ss/g, hms[2]);
+    };
+
+        //数字前置补零
+    layui.laytpl.digit = function(num, length, end){
+        var str = '';
+        num = String(num);
+        length = length || 2;
+        for(var i = num.length; i < length; i++){
+            str += '0';
+        }
+        return num < Math.pow(10, length) ? str + (num|0) : num;
+    };
+
+    initData();
+    var t03ZhaopinOutList;
+    var t03ZhaopinInList;
+    function initData(){
+        $.ajax({
+            type : 'get',
+            url : baseUrl+'/getZhaopin?locate=cn',
+            async : false,
+            success : function(data) {
+                if(data.flag){
+                    t03ZhaopinOutList = data.t03ZhaopinOutList;
+                    t03ZhaopinInList = data.t03ZhaopinInList;
+
+                    //显示外部招聘第一页
+                    showPage(0,1);
+                    //显示内部招聘第一页
+                    showPage(0,2);
+                }else{
+                    console.info(data.msg);
+                }
+            }
+        });
+    }
+
+    function showPage(page, type){
+        layui.use(['laytpl'], function() {
+            var laytpl = layui.laytpl;
+            var listId = "accordion1";
+            var pagerId = "zhaopinOutPager";
+            if (type == 2) {
+                listId = 'accordion2';
+                pagerId = 'zhaopinInPager';
+            }
+            var zhaopinPageData = [];
+            var srcData = t03ZhaopinOutList;
+            if(type==2){
+                srcData = t03ZhaopinInList;
+            }
+
+            var zhaopinPageData = getPageData(page, srcData);
+            var getTpl = zhaopinItem.innerHTML
+                , view = document.getElementById(listId);
+            laytpl(getTpl).render(zhaopinPageData, function (html) {
+                view.innerHTML = html;
+            });
+
+            var zhaopinPageCount = srcData.length;
+            var pages = zhaopinPageCount / pageNum;
+            if (zhaopinPageCount % pages > 0) {
+                pages++;
+            }
+
+            var pagerOut = [];
+            pagerOut["pages"] = pages; //总页数
+            pagerOut["page"] = page;  //显示第几页
+            pagerOut["type"] = type;  //1:外部 2:内部
+            var getPagerTpl = zhaopinPager.innerHTML
+                , viewPager = document.getElementById(pagerId);
+            laytpl(getPagerTpl).render(pagerOut, function (html) {
+                viewPager.innerHTML = html;
+            });
+        });
+    }
+    function getPageData(page, srcData){
+        var zhaopinPageData = [];
+        for(var i=0;(i+page*pageNum)<srcData.length && i < pageNum; i++){
+            zhaopinPageData.push(srcData[i+page*pageNum]);
+        }
+        return zhaopinPageData;
+    }
+</script>
+
+</body>
+</html>
