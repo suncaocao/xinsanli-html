@@ -205,12 +205,12 @@
          var $mapItem2 = $('.n-wl-mapItem2');
 
 
-         $mapItem.hover(function () {
+         $mapItem.click(function () {
              $mapItem.removeClass('active');
              $(this).addClass('active')
          });
 
-         $mapItem1.hover(function () {
+         $mapItem1.click(function () {
              var i = $(this).attr('data-index');
 
              var html = "<div class='n-wl-mapInfo1Item'>\n" +
@@ -221,7 +221,7 @@
                  "                        <p><span>邮箱：</span><span>" + data.mapItem1List[i].eml + "</span></p>\n" +
                  "                        <p><span>地址：</span><span>" + data.mapItem1List[i].add + "</span></p>\n" +
                  "                    </div>\n" +
-                 "                    <a href='" + i + "'>点击查看  公司详情</a>\n" +
+                 // "                    <a href='javascript:;'>点击查看  公司详情</a>\n" +
                  "                </div>";
              $mapInfoList1.html(html);
              $mapInfo.show();
@@ -229,7 +229,7 @@
 
          });
 
-         $mapItem2.hover(function () {
+         $mapItem2.click(function () {
              var i = $(this).attr('data-index');
              var html = ''
              $mapInfoList2Title.html(data.mapItem2List[i].title);

@@ -176,6 +176,7 @@ position: absolute;top: 0;left: 0;z-index: 100}
 .n-wl-mapBox{padding: 76px 0;}
 .n-wl-map{ position: relative; padding-top: 74.5%;background: url("../images/dtBg.jpg") no-repeat;background-position: center;background-size: cover}
 /*52.5*/
+/*69*/
 .n-wl-map2{padding-top: 69%;background-image: url("../images/dtBg2.jpg") }
 .n-wl-mapItem{position: absolute;cursor: pointer}
 .n-wl-mapItem1 i{color:#005aab }
@@ -241,17 +242,17 @@ position: absolute;top: 0;left: 0;z-index: 100}
 .n-wl-mapItem3 span{color:#002846;font-size: 16px; }
 .n-wl-mapItem3:hover i{color: #da2028}
 .n-wl-mapItem3:hover span{color: #da2028}
-.n-wl-mapItem3:nth-child(2){left: calc(42.1% * 1.31 + 1%);top:55.5%}
-.n-wl-mapItem3:nth-child(3){left: calc(48% * 1.31 + 1%);top:59%}
-.n-wl-mapItem3:nth-child(4){left: calc(62.4% * 1.31 + 1%);top:59.1%}
-.n-wl-mapItem3:nth-child(5){left: calc(46.3% * 1.31 + 1%);top:64.2%}
-.n-wl-mapItem3:nth-child(6){left: calc(53.1% * 1.31 + 1%);top:66.3%}
-.n-wl-mapItem3:nth-child(7){left: calc(50.7% * 1.31 + 1%);top:70.1%}
-.n-wl-mapItem3:nth-child(8){left: calc(59.1% * 1.31 + 1%);top: 80.4%;}
-.n-wl-mapItem3:nth-child(9){left:calc(48.4% * 1.31 + 1%);top:82%}
-.n-wl-mapItem3:nth-child(10){left: calc(50% * 1.31 + 1%);top:86.6%}
-.n-wl-mapItem3:nth-child(11){left: calc(59.2% * 1.31 + 1%);top:87.5%}
-.n-wl-mapItem3:nth-child(12){left: calc(68.3% * 1.31 + 1%);top:96.3%}
+.n-wl-mapItem3:nth-child(2){left: calc(42.1% * 1.31  + 1%);top:55.5%}
+.n-wl-mapItem3:nth-child(3){left: calc(48% * 1.31  + 1%);top:59%}
+.n-wl-mapItem3:nth-child(4){left: calc(62.4% * 1.31  + 1%);top:59.1%}
+.n-wl-mapItem3:nth-child(5){left: calc(46.3% * 1.31  + 1%);top:64.2%}
+.n-wl-mapItem3:nth-child(6){left: calc(53.1% * 1.31  + 1%);top:66.3%}
+.n-wl-mapItem3:nth-child(7){left: calc(50.7% * 1.31  + 1%);top:70.1%}
+.n-wl-mapItem3:nth-child(8){left: calc(59.1% * 1.31  + 1%);top: 80.4%;}
+.n-wl-mapItem3:nth-child(9){left:calc(48.4% * 1.31  + 1%);top:82%}
+.n-wl-mapItem3:nth-child(10){left: calc(50% * 1.31  + 1%);top:86.6%}
+.n-wl-mapItem3:nth-child(11){left: calc(59.2% * 1.31  + 1%);top:87.5%}
+.n-wl-mapItem3:nth-child(12){left: calc(68.3% * 1.31  + 1%);top:96.3%}
 
 
 .n-content-top{background: #e6e6e6;padding: 38px 0 52px 0;}
@@ -278,6 +279,7 @@ select::-ms-expand{ }
 
 .about3-list{ margin-top: 74px; display: flex;justify-content: space-between;align-items: stretch}
 .about3Img{width: 48%;position:relative}
+.about3Img img{width: 100%;}
 .about3-list-r{width: 48%;display: flex;justify-content: space-between}
 .about3-list-r .about3Item{width: 48%; padding: 10px; border: 2px solid #026bdd; display: flex; justify-content: center; align-items: center;transition: .4s all ease}
 .about3Item>div{text-align: center}
@@ -296,14 +298,17 @@ select::-ms-expand{ }
 
 .n-title{text-align: center;margin:48px 0 32px 0}
 .n-title h2{font-size: 38px; color: #005aab;}
-.n-title p{ width: 80%;margin: 0 auto; margin-top: 28px;color: #002846;line-height: 2em;}
+.n-title p{ width: 90%;margin: 0 auto; margin-top: 28px; font-size: 20px; color: #002846;line-height: 2em;}
 
-.n-rl-list{display: flex;flex-wrap: wrap;}
-.n-rl-listItem{ width: 50%; padding: 50px 60px;display: flex;align-items: center;color: #fff;background: #026bdd}
+
+.n-rl .n-title {text-align: left;}
+.n-rl .n-title p{width: 82%;margin: 0; margin-top: 28px;}
+.n-rl-list{display: flex; justify-content: center; flex-wrap: wrap;}
+.n-rl-listItem{ width: 36%; padding: 26px 20px;display: flex; align-items: center;color: #fff;background: #026bdd; transform: translateX(-19%);}
 .n-rl-listItem h3{ }
 
 .n-rl-listItem-l{width: 33%; padding: 10px; display: flex;align-items: center;justify-content: center}
-.n-rl-listItem-l img{max-width: 100%}
+.n-rl-listItem-l img{max-width: 50%}
 .n-rl-listItem-r{width: 67%;}
 .n-rl-listItem-r h3{color: #fff}
 .n-rl-listItem-r p{color: #fff;font-size: 20px;line-height: 1.8em;margin-top: 26px;}
@@ -312,6 +317,7 @@ select::-ms-expand{ }
 .n-rl-listItem2 .n-rl-listItem-r h3{color: #026bdd}
 .n-rl-listItem2 .n-rl-listItem-r p{color: #026bdd}
 
+.n-rl-tab{display: none}
 .n-rl-tab .nav-tabs{display: flex;justify-content: center;}
 .n-rl-tab .nav-tabs > li{width: 130px;margin: 0 15px;}
 .n-rl-tab .nav-tabs > li a{display: block;width: 100%;height: 34px; line-height: 34px;text-align: center; color: #002846;background: #d1d2d4}
@@ -319,7 +325,7 @@ select::-ms-expand{ }
 .n-rl-tab .nav-tabs > li.active a{ color: #fff;background: #026bdd}
 
 .n-rl-tab .tab-content{margin-top: 34px;}
-.n-rl-item2{padding-top: 30px;}
+.n-rl-item2{padding-top: 30px;display: block}
 .n-rl-swiper .gallery-thumbs .swiper-slide{padding: 46px 0 36px 0;position: relative;font-size: 20px;text-align: center}
 .n-rl-swiper .gallery-thumbs .swiper-slide:after{content: '';position: absolute;left: 0;top:20px;transform: translate(0,-50%);width: 100%;height: 5px;background: #005aab}
 .n-rl-swiper .gallery-thumbs .swiper-slide:before{content: '';position: absolute;left: 50%;top: 20px;transform: translate(-50%,-50%);z-index: 99;
@@ -339,11 +345,19 @@ select::-ms-expand{ }
 .n-rl2 .n-title>div{margin-top: 40px;}
 .n-rl2 .n-title p{margin-top: 10px}
 
-.n-rl2-list{text-align: center;margin-top: 26px;}
+
+.n-rl2 .n-title {text-align: left;}
+.n-rl2 .n-title p{width: 100%}
+
+.n-rl2-list{ display: none; text-align: center;margin-top: 26px;}
 .n-rl2-list .container .row >div{margin-top: 20px}
 .n-rl2-list p{margin-top: 20px}
 
-.info-body-t{padding: 20px 40px; display: flex;justify-content: space-between;border-bottom: 1px solid #dfdfdf}
+
+.n-rl3 .n-title {text-align: left;}
+.n-rl3 .n-title p{width: 100%}
+
+.info-body-t{ display: none; padding: 20px 40px; justify-content: space-between;border-bottom: 1px solid #dfdfdf}
 .info-body-t>div{width: 33.3%;margin-top: 10px;}
 .info-body-b{padding:  40px;border-bottom: 1px solid #dfdfdf}
 .info-body-b>div{width: 100%;margin-top: 10px;}
@@ -495,6 +509,7 @@ position: absolute;top: 20px; right: 20px}
 
     .about3-list{display: block}
     .about3Img{width: 100%}
+    .about3Img img{width: 100%}
     .about3-list-r{width: 100%;margin-top: 20px;}
 
 }
@@ -550,6 +565,8 @@ position: absolute;top: 20px; right: 20px}
     .n-rl-listItem-r p{font-size: 16px;margin-top: 10px}
     .info-body-t>div{width: 100%}
     .n-about-cq{margin-top: 40px}
+
+    .n-rl .n-title p{width: 100%;}
 }
 
 

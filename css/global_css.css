@@ -49,9 +49,9 @@ img{max-width: 100%}
 .nav-btn{width: 36px; height: 100%; position: absolute ;top: 0; right: 10px}
 .nav-table-cell{width: 100%;height: 100%;}
 .nav-table-cell span {display: block; width: 80%; height: 1px; border-top:1px solid #004177 ;  margin-top: 11px}
-.close span:nth-of-type(1){-webkit-transform: translateY(12px) rotate(45deg);  transform: translateY(12px) rotate(45deg);}
-.close span:nth-of-type(2){opacity: 0}
-.close span:nth-of-type(3){-webkit-transform: translateY(-12px) rotate(-45deg);  transform: translateY(-12px) rotate(-45deg);}
+.nav-close span:nth-of-type(1){-webkit-transform: translateY(12px) rotate(45deg);  transform: translateY(12px) rotate(45deg);}
+.nav-close span:nth-of-type(2){opacity: 0}
+.nav-close span:nth-of-type(3){-webkit-transform: translateY(-12px) rotate(-45deg);  transform: translateY(-12px) rotate(-45deg);}
 
 .mynav-ul {width: 100%;height:0; padding: 0 50px; opacity: 0; overflow: hidden;position: fixed;top:60px; background:rgba(242,145,9,.85);z-index: 10000}
 .mynav-ul li {width: 100% ; padding: 8px 0; margin-bottom:4px; border-bottom: 1px solid #fff; }
@@ -76,6 +76,7 @@ img{max-width: 100%}
 .pcNavUl>li>a:after{content: '';position: absolute;left: 0;bottom:0%;width: 100%;height: 0;
    background: #da2028; transition: .2s all linear; }
 .pcNavUl>li>a.active{color: #da2028}
+.pcNavUl>li.active>a{color: #da2028}
 .pcNavUl2{display: none; width: 120px; background: rgba(255,255,255,.8);padding-bottom: 10px;
     position: absolute;left: 50%;top: 100%;transform: translateX(-50%);
     animation: navU .5s ease forwards;

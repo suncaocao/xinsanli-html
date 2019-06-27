@@ -4,9 +4,25 @@ $('.f-weixin').click(function () {
 $('.code').click(function () {
     $(this).hide()
 })
-$('.close').click(function () {
-    $('.logIn').removeClass('active')
-    $('.logOn').removeClass('active')
+
+
+
+$(function () {
+    $('.submit').click(function () {
+        $('.logIn').show();
+    })
+    $('.service4-listL-itemR').click(function () {
+        $('.logIn').show();
+    })
+    $('.goLogOn').click(function () {
+        $('.logIn').hide();
+        $('.logOn').show();
+    })
+
+    $('.close').click(function () {
+        $('.logIn').hide()
+        $('.logOn').hide()
+    })
 })
 /*!
  * GlobalMethod JavaScript Library v1.0.1
@@ -55,6 +71,7 @@ $('.close').click(function () {
             const base = this
             // 手机导航按钮
             this.navBtn.on('click', function () {
+                alert(123)
                 $('.nav-table-cell').toggleClass('close');
                 $('.mynav-ul').toggleClass('showNav');
 

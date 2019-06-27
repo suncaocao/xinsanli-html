@@ -29,7 +29,7 @@
             </div>
             <div class="pcNav-r">
                 <ul class="pcNavUl">
-                    <li><a class="active" href="">首页</a></li>
+                    <li><a class="" href="index.html">首页</a></li>
                     <li>
                         <a class="" href="about.html">关于我们</a>
                         <ul class="pcNavUl2">
@@ -50,7 +50,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">信息中心</a>
+                        <a href="xinxi-1.html">信息中心</a>
                         <ul class="pcNavUl2">
                             <li><a href="xinxi-1.html">信息查询</a></li>
                             <li><a href="xinxi-2.html">采购招标</a></li>
@@ -59,7 +59,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">人力资源</a>
+                        <a href="renli-1.html">人力资源</a>
                         <ul class="pcNavUl2">
                             <li><a href="renli-1.html">员工发展</a></li>
                             <li><a href="renli-2.html">员工培训</a></li>
@@ -75,13 +75,39 @@
                     </li>
                 </ul>
                 <div class="pcNav-r-box">
-                    <div class="pcNav-search">
-                        <img src="images/sousou.png" alt="">
-                        <input type="text" placeholder="搜索">
-                    </div>
+                    <!--<div class="pcNav-search">-->
+                        <!--<img src="images/sousou.png" alt="">-->
+                        <!--<input type="text" placeholder="搜索">-->
+                    <!--</div>-->
                     <a href=""  >英文</a>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <script>
+        var wPathname = window.location.pathname;
+
+        var navArr= ['index','about','fuWu','xinxi','renli','wangLuo']
+        if(wPathname && wPathname != '/' ){
+
+            for(var i = 0; i < navArr.length; i ++ ){
+                if(wPathname.indexOf(navArr[i]) > -1 )
+                {
+                    $('.pcNavUl>li').eq(i).addClass('active')
+
+                }
+            }
+        }else {
+
+            $('.pcNavUl>li').eq(0).addClass('active')
+        }
+
+        $('.nav-btn').on('click', function () {
+
+            $('.nav-table-cell').toggleClass('nav-close');
+            $('.mynav-ul').toggleClass('showNav');
+
+        });
+    </script>
