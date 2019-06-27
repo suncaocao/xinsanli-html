@@ -499,6 +499,7 @@ position: absolute;top: 20px; right: 20px}
 
     .n-wl-mapInfoList{padding: 20px;}
     .n-wl-mapInfoList2{width: 80%}
+    .n-wl-mapInfoList{width: 80%}
 
     .n-wl-map2{padding-left: 5%;padding-right: 5%;}
 
@@ -584,4 +585,5 @@ position: absolute;top: 20px; right: 20px}
 
     .n-wl-mapItem{ width: 50%; }
     .n-wl-mapInfoList2{width: 90%; }
+    .n-wl-mapInfoList{width: 90%; }
 }
